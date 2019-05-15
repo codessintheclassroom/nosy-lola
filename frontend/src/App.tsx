@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Container, Row, Col, CardColumns } from 'react-bootstrap';
+import { Container, Row, Col, CardColumns, CardDeck } from 'react-bootstrap';
 import PetCard from './PetCard';
 import Pet from './Pet';
 
@@ -19,11 +19,11 @@ const App: React.FC = () => {
     <Container>
     <Row>
     <Col>
-      <CardColumns>
+      <CardDeck>
       {
         pets.map((pet) => <PetCard key={pet.id} pet={pet} />)
       }
-      </CardColumns>
+      </CardDeck>
     </Col>
     </Row>
   </Container>
